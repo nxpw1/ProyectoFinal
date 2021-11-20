@@ -1,0 +1,12 @@
+C:\Users\MSI PRO\source\repos\TrabajoFinal\Entidades\bin\Debug\Entidades.dll
+C:\Users\MSI PRO\source\repos\TrabajoFinal\Entidades\bin\Debug\Entidades.pdb
+C:\Users\MSI PRO\source\repos\TrabajoFinal\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\MSI PRO\source\repos\TrabajoFinal\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\MSI PRO\source\repos\TrabajoFinal\Entidades\obj\Debug\Entidades.dll
+C:\Users\MSI PRO\source\repos\TrabajoFinal\Entidades\obj\Debug\Entidades.pdb
+C:\Users\MSI PRO\Desktop\TrabajoFinal\Entidades\bin\Debug\Entidades.dll
+C:\Users\MSI PRO\Desktop\TrabajoFinal\Entidades\bin\Debug\Entidades.pdb
+C:\Users\MSI PRO\Desktop\TrabajoFinal\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\MSI PRO\Desktop\TrabajoFinal\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\MSI PRO\Desktop\TrabajoFinal\Entidades\obj\Debug\Entidades.dll
+C:\Users\MSI PRO\Desktop\TrabajoFinal\Entidades\obj\Debug\Entidades.pdb
