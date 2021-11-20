@@ -45,10 +45,16 @@ namespace Presentacion
             a.Show();
         }
 
-        private void btnEmpleado_Click(object sender, RoutedEventArgs e)
+        private void btnEmpleados_Click(object sender, RoutedEventArgs e)
         {
-            Empleados a = new Empleados();
+            Empleado a = new Empleado();
             a.Show();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            StockProducto b = new StockProducto();
+            b.Show();
         }
     }
 }

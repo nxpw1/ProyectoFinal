@@ -11,10 +11,11 @@
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="btnCliente" Grid.ColumnSpan="2" Content="Clientes" HorizontalAlignment="Left" Height="50" Margin="67,134,0,0" VerticalAlignment="Top" Width="120" Click="btnCliente_Click"/>
-        <Button x:Name="btnProducto" Grid.ColumnSpan="2" Content="Productos" HorizontalAlignment="Left" Height="50" Margin="488,134,0,0" VerticalAlignment="Top" Width="129" Click="btnProducto_Click"/>
+        <Button x:Name="btnCliente" Grid.ColumnSpan="2" Content="Clientes" HorizontalAlignment="Left" Height="50" Margin="67,84,0,0" VerticalAlignment="Top" Width="120" Click="btnCliente_Click"/>
+        <Button x:Name="btnProducto" Grid.ColumnSpan="2" Content="Productos" HorizontalAlignment="Left" Height="50" Margin="488,84,0,0" VerticalAlignment="Top" Width="129" Click="btnProducto_Click"/>
         <Button x:Name="btnVenta" Grid.ColumnSpan="2" Content="Ventas" HorizontalAlignment="Left" Height="46" Margin="67,232,0,0" VerticalAlignment="Top" Width="120" Click="btnVenta_Click"/>
-        <Button x:Name="btnEmpleado" Grid.ColumnSpan="2" Content="Empleados" HorizontalAlignment="Left" Height="46" Margin="488,232,0,0" VerticalAlignment="Top" Width="129" Click="btnEmpleado_Click"/>
+        <Button x:Name="btnEmpleados" Grid.ColumnSpan="2" Content="Empleados" HorizontalAlignment="Left" Margin="488,232,0,0" VerticalAlignment="Top" Width="129" Height="46" Click="btnEmpleados_Click"/>
+        <Button Grid.ColumnSpan="2" Content="Button" HorizontalAlignment="Left" Height="60" Margin="295,278,0,0" VerticalAlignment="Top" Width="154" Click="Button_Click"/>
 
     </Grid>
 </Window>

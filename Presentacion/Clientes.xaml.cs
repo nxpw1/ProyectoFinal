@@ -118,7 +118,7 @@ namespace Presentacion
                 txtApellidos.Text = clienteseleccionado.ApellidoCliente;
                 cbosexo.Text = clienteseleccionado.SexoCliente;
                 txttelefono.Text=Convert.ToString(clienteseleccionado.TelefonoCliente);
-                dtpfecha.Text = clienteseleccionado.EdadCliente;
+                dtpfecha.Text = clienteseleccionado.FechaCliente;
             }
         }
     }
