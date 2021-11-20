@@ -10,3 +10,9 @@ C:\Users\MSI PRO\Desktop\TrabajoFinal\Entidades\obj\Debug\Entidades.csprojAssemb
 C:\Users\MSI PRO\Desktop\TrabajoFinal\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\MSI PRO\Desktop\TrabajoFinal\Entidades\obj\Debug\Entidades.dll
 C:\Users\MSI PRO\Desktop\TrabajoFinal\Entidades\obj\Debug\Entidades.pdb
+D:\MAURO\FUNDAMENTOS DE PROGRAMACION\TRABAJO FINAL\TrabajoFinal\Entidades\bin\Debug\Entidades.dll
+D:\MAURO\FUNDAMENTOS DE PROGRAMACION\TRABAJO FINAL\TrabajoFinal\Entidades\bin\Debug\Entidades.pdb
+D:\MAURO\FUNDAMENTOS DE PROGRAMACION\TRABAJO FINAL\TrabajoFinal\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+D:\MAURO\FUNDAMENTOS DE PROGRAMACION\TRABAJO FINAL\TrabajoFinal\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+D:\MAURO\FUNDAMENTOS DE PROGRAMACION\TRABAJO FINAL\TrabajoFinal\Entidades\obj\Debug\Entidades.dll
+D:\MAURO\FUNDAMENTOS DE PROGRAMACION\TRABAJO FINAL\TrabajoFinal\Entidades\obj\Debug\Entidades.pdb

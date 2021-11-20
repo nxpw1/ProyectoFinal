@@ -14,7 +14,7 @@ namespace Entidades
         public string ApellidoCliente { get; set; }
         public string SexoCliente { get; set; }
         public int TelefonoCliente { get; set; }
-        public string EdadCliente { get; set; }
+        public string FechaCliente { get; set; }
 
     }
 }

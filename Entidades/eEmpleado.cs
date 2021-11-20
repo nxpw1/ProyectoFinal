@@ -9,18 +9,17 @@ namespace Entidades
     public class eEmpleado
     {
         public int idempleado { get; set; }
-        public string nombre { get; set; }
+        public string NombreEmpleado { get; set; }
 
-        public string apellido { get; set; }
-        public string sexo { get; set; }
-        public string edad { get; set; }
+        public string ApellidoEmpleado { get; set; }
+        public string SexoEmpleado { get; set; }
+        public string FechaNacEmpleado { get; set; }
 
-        public string cargo { get; set; }
-        public string tiempo { get; set; }
-
+        public string CargoEmpleado { get; set; }
+        public string FechaIngreso { get; set; }
         public override string ToString()
         {
-            return nombre + " " + apellido;
+            return NombreEmpleado + " " + ApellidoEmpleado;
         }
 
     }
