@@ -27,7 +27,7 @@ namespace Negocios
             };
             return productod.Insertar(producto);
         }
-        public string Modificarproducto(int codpro, string nombproducto, int cantproducto, decimal preproducto, string marproducto)
+        public string ModificarProducto(int codpro, string nombproducto, int cantproducto, decimal preproducto, string marproducto)
         {
             eProducto producto = new eProducto()
             {
@@ -39,7 +39,7 @@ namespace Negocios
             };
             return productod.Modificar(producto);
         }
-        public string Eliminarproducto(int id)
+        public string EliminarProducto(int id)
         {
             return productod.Eliminar(id);
         }
@@ -47,6 +47,14 @@ namespace Negocios
         public List<eProducto> ListarProducto()
         {
             return productod.ListarTodo();
+        }
+        public eProducto BuscarProductoxNombre(string nombre)
+        {
+            return productod.BuscarProducto(nombre);
+        }
+        public int ObtenerStockProductos(string nomb)
+        {
+            return productod.ObtenerProductosDisponibles(nomb);
         }
     }
 }

@@ -33,7 +33,7 @@ namespace Negocios
                 ApellidoCliente = apellicli,
                 SexoCliente = sexocli,
                 TelefonoCliente = telcli,
-                EdadCliente = anio + "/" + mes + "/" + dia
+                FechaCliente = anio + "/" + mes + "/" + dia
             };
             return clientedd.Insertar(objcliente);
         }
@@ -55,7 +55,7 @@ namespace Negocios
                 ApellidoCliente = apellicli,
                 SexoCliente = sexocli,
                 TelefonoCliente = telcli,
-                EdadCliente = anio + "/" + mes + "/" + dia
+                FechaCliente = anio + "/" + mes + "/" + dia
             };
             return clientedd.Modificar(objcliente);
         }
