@@ -16,7 +16,7 @@ namespace Datos
             try
             {
                 SqlConnection con = db.ConectaDB();
-                string insert = string.Format("INSERT INTO empleado (nombre, apellido, sexo, edad, cargo,tiempo_trabajo) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}')", obj.nombre, obj.apellido, obj.sexo, obj.edad, obj.cargo, obj.tiempo);
+                string insert = string.Format("insert into empleado (nombre, apellido, sexo, fechanacimiento, cargo,fecha_trabajo) values ('{0}','{1}','{2}','{3}','{4}','{5}')", obj.NombreEmpleado, obj.ApellidoEmpleado, obj.SexoEmpleado, obj.FechaNacEmpleado, obj.CargoEmpleado,obj.FechaIngreso);
                 SqlCommand cmd = new SqlCommand(insert, con);
                 cmd.ExecuteNonQuery();
                 return "Inserto";
@@ -35,7 +35,7 @@ namespace Datos
             try
             {
                 SqlConnection con = db.ConectaDB();
-                string update = string.Format("UPDATE empleado SET nombre='{1}', apellido='{2}', sexo='{3}', edad='{4}',cargo='{5}', tiempo_trabajo='{6}' Where id_empleado={0}", obj.idempleado, obj.nombre, obj.apellido, obj.sexo, obj.edad, obj.cargo, obj.tiempo);
+                string update = string.Format("update empleado set nombre='{0}', apellido='{1}', sexo='{2}', fechanacimiento='{3}',cargo='{4}', fecha_trabajo='{5}' where id_empleado={6}", obj.NombreEmpleado, obj.ApellidoEmpleado, obj.SexoEmpleado, obj.FechaNacEmpleado, obj.CargoEmpleado, obj.FechaIngreso,obj.idempleado);
                 SqlCommand cmd = new SqlCommand(update, con);
                 cmd.ExecuteNonQuery();
                 return "Modifico";
@@ -54,7 +54,7 @@ namespace Datos
             try
             {
                 SqlConnection con = db.ConectaDB();
-                string delete = string.Format("DELETE from empleado WHERE id_empleado={0}", id);
+                string delete = string.Format("delete from empleado where id_empleado={0}", id);
                 SqlCommand cmd = new SqlCommand(delete, con);
                 cmd.ExecuteNonQuery();
                 return "Elimino";
@@ -73,20 +73,23 @@ namespace Datos
             try
             {
                 List<eEmpleado> lsEmpleado = new List<eEmpleado>();
+                DateTime d,e;
                 eEmpleado empleado = null;
                 SqlConnection con = db.ConectaDB();
-                SqlCommand cmd = new SqlCommand("select id_empleado,nombre, apellido, sexo, edad, cargo, tiempo_trabajao from empleado", con);
+                SqlCommand cmd = new SqlCommand("select id_empleado,nombre, apellido, sexo, fechanacimiento, cargo, fecha_trabajo from empleado", con);
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
                     empleado = new eEmpleado();
-                    empleado.idempleado = (int)reader["idempleado"];
-                    empleado.nombre = (string)reader["nombre"];
-                    empleado.apellido = (string)reader["apellido"];
-                    empleado.sexo = (string)reader["sexo"];
-                    empleado.edad = (string)reader["edad"];
-                    empleado.cargo = (string)reader["cargo"];
-                    empleado.tiempo = (string)reader["tiempo"];
+                    empleado.idempleado = (int)reader["id_empleado"];
+                    empleado.NombreEmpleado = (string)reader["nombre"];
+                    empleado.ApellidoEmpleado = (string)reader["apellido"];
+                    empleado.SexoEmpleado = (string)reader["sexo"];
+                    d = (DateTime)reader["fechanacimiento"];
+                    empleado.FechaNacEmpleado = d.ToShortDateString();
+                    empleado.CargoEmpleado = (string)reader["cargo"];
+                    e = (DateTime)reader["fecha_trabajo"];
+                    empleado.FechaIngreso = e.ToShortDateString();
                     lsEmpleado.Add(empleado);
                 }
                 reader.Close();
@@ -101,5 +104,6 @@ namespace Datos
                 db.DesconectaDB();
             }
         }
+
     }
 }

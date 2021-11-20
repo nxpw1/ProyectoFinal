@@ -99,5 +99,63 @@ namespace Datos
                 db.DesconectaDB();
             }
         }
+        public eProducto BuscarProducto(string nombre)
+        {
+            try
+            {
+                eProducto producto = null;
+                SqlConnection con = db.ConectaDB();
+                string select = string.Format("select id_producto,nombre, cantidad, precio, marca from producto where nombre={0}", nombre);
+                SqlCommand cmd = new SqlCommand(select, con);
+                SqlDataReader reader = cmd.ExecuteReader();
+                if(reader.Read())
+                {
+                    producto = new eProducto();
+                    producto.idproducto = (int)reader["id_producto"];
+                    producto.NombreProducto = (string)reader["nombre"];
+                    producto.CantidadProducto = (int)reader["cantidad"];
+                    producto.PrecioProducto = (decimal)reader["precio"];
+                    producto.MarcaProducto = (string)reader["marca"];
+                }
+                reader.Close();
+                return producto;
+            }
+            catch(Exception ex)
+            {
+                return null;
+            }
+            finally
+            {
+                db.DesconectaDB();
+            }
+        }
+        public int ObtenerProductosDisponibles(string nombrepro)
+        {
+            try
+            {
+                int disponible = 0;
+                SqlConnection con = db.ConectaDB();
+                //StringBuilder sqlQuery = new StringBuilder();
+                //sqlQuery.Append("select sum(cantidad) as disponible from producto where nombre= " + nombrepro);
+                string select = string.Format("select sum(cantidad) as disponible from producto where nombre= '{0}'" ,nombrepro);
+                //SqlCommand cmd = new SqlCommand(sqlQuery.ToString(), con);
+                SqlCommand cmd = new SqlCommand(select, con);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while(reader.Read())
+                {
+                    disponible = (int)reader["disponible"];
+                }
+                reader.Close();
+                return disponible;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+            finally
+            {
+                db.DesconectaDB();
+            }
+        }
     }
 }
